@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABDERRAHMANNE BELHERAOUI | Systems Security Student</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <meta name="description"
+        content="Portfolio of ABDERRAHMANNE BELHERAOUI, a Systems Security student and aspiring Cybersecurity Engineer specializing in backend development and automation." />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved"></i> ABDERRAHMANNE BELHERAOUI
+            </div>
+            <div class="nav-links" id="nav-links">
+                <button data-section="hero" class="nav-btn active">Home</button>
+                <button data-section="about" class="nav-btn">About</button>
+                <button data-section="projects" class="nav-btn">Projects</button>
+                <button data-section="skills" class="nav-btn">Skills</button>
+                <button data-section="contact" class="nav-btn">Contact</button>
+                <button id="admin-btn" class="nav-btn admin-toggle"><i class="fa-solid fa-lock"></i> Admin</button>
+            </div>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content reveal">
+            <div class="badge">Systems Security • 4th Year</div>
+            <h1>Securing the <span class="gradient-text">Future</span></h1>
+            <p>Systems Security student dedicated to hardening systems, building smart solutions, and defending the
+                digital frontier.</p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" data-scroll="projects">
+                    View My Work <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button class="btn btn-outline" data-scroll="contact">
+                    Get In Touch
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title reveal">About Me </h2>
+        <div class="about-grid">
+            <div class="about-img-wrapper reveal">
+                <img src="/image/frir.PNG" alt="ABDERRAHMANNE BELHERAOUI" />
+                <div class="img-backdrop"></div>
+            </div>
+            <div class="about-text reveal delay-200">
+                <h3>Who I Am</h3>
+                <p>I'm a 4th-year Computer Science student specializing in Systems Security. My passion lies at the
+                    intersection of cybersecurity, backend development, and networking. I thrive on solving complex
+                    problems, whether it's hardening a server or architecting a secure application.</p>
+                <p>Currently sharpening my expertise in networking, Linux administration, Python-driven automation and
+                    penetration testing.
+                    I'm driven by a goal to build secure digital infrastructures and explore the limitless
+                    possibilities of AI in security.</p>
+
+                <div class="stat-item">
+                    <i class="fa-solid fa-shield-check"></i>
+                    <span><strong>Security</strong> Research</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-terminal"></i>
+                    <span><strong>Linux</strong> Labs</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-gears"></i>
+                    <span><strong>Automation</strong> Tools</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-gears"></i>
+                    <span><strong>Penetration</strong> Testing</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-gears"></i>
+                    <span><strong>Network Security</strong></span>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-gears"></i>
+                    <span><strong>Web Development</strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title reveal">Featured Projects </h2>
+
+        <!-- Admin Panel -->
+        <div id="admin-project-panel" class="admin-panel reveal" style="display:none;">
+            <h3><i class="fa-solid fa-pen-to-square"></i> Add / Edit Project</h3>
+            <form id="project-form">
+                <input type="hidden" id="project-id" />
+                <div class="form-group">
+                    <input type="text" id="project-title" placeholder="Project Title" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" id="project-category" placeholder="Category (e.g. Web Dev)" required />
+                </div>
+                <div class="form-group">
+                    <input type="url" id="project-image" placeholder="Image URL" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" id="project-tech" placeholder="Tech Stack (comma separated)" />
+                </div>
+                <div class="form-group">
+                    <textarea id="project-description" placeholder="Project Description" rows="3" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save Project</button>
+                    <button type="button" id="cancel-project" class="btn btn-outline">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="grid grid-2" id="projects-container">
+            <!-- Projects injected by JS -->
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title reveal">Skills & Expertise </h2>
+
+        <!-- Admin Panel -->
+        <div id="admin-skill-panel" class="admin-panel reveal" style="display:none;">
+            <h3><i class="fa-solid fa-pen-to-square"></i> Add / Edit Skill</h3>
+            <form id="skill-form">
+                <input type="hidden" id="skill-name-old" />
+                <div class="form-group">
+                    <input type="text" id="skill-name" placeholder="Skill Name" required />
+                </div>
+                <div class="form-group">
+                    <input type="number" id="skill-level" placeholder="Proficiency % (0‑100)" min="0" max="100"
+                        required />
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save Skill</button>
+                    <button type="button" id="cancel-skill" class="btn btn-outline">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="grid grid-3" id="skills-container">
+            <!-- Skills injected by JS -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container reveal">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-subtitle">Have a project in mind or want to discuss potential opportunities? I'd love to
+                hear from you!</p>
+
+            <div class="contact-cards">
+                <a href="mailto:abdebelhe@gmail.com" class="contact-card">
+                    <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>abdebelhe@gmail.com</p>
+                </a>
+                <a href="tel:0562233611" class="contact-card">
+                    <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                    <h3>Phone</h3>
+                    <p>0562233611</p>
+                </a>
+                <div class="contact-card">
+                    <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>Location</h3>
+                    <p>Boudouaou, Boumerdes</p>
+                </div>
+                <a href="https://github.com/abdebelheraoui" class="contact-card">
+                    <div class="icon-box"><i class="fa-brands fa-github"></i></div>
+                    <h3>GitHub</h3>
+                    <p>github.com/abdebelheraoui</p>
+                </a>
+                <a href="https://www.linkedin.com/in/belheraoui-abderrahmanne-26b4073b3/" class="contact-card">
+                    <div class="icon-box"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <h3>LinkedIn</h3>
+                    <p>BELHERAOUI ABDERRAHMANNE</p>
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">ABDERRAHMANNE BELHERAOUI</div>
+            <p>© 2026 ABDERRAHMANNE BELHERAOUI. Built with <i class="fa-solid fa-shield-halved"
+                    style="color: #fbbf24;"></i> and Focus.</p>
+            <div class="social-links">
+                <a href="https://github.com/abdebelheraoui"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/belheraoui-abderrahmanne-26b4073b3/"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:abdebelhe@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
