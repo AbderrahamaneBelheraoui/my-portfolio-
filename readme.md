@@ -3,8 +3,8 @@ Web Development Lab — Personal Portfolio
  Student Information
 - **Name:** ABDERRAHMANNE BELHERAOUI
 - **Field of Study:** Systems Security (4th Year)
-- **Course:** Web Development Lab
-- **Email:** [abdebelhe@gmail.com](mailto:abdebelhe@gmail.com)
+- **Course:** Web and mobile Development 
+- **Email:** [abdebelhe@gmail.com]/[aa.belheraoui@ensta.edu.dz]
 - **GitHub:** [github.com/abdebelheraoui](https://github.com/abdebelheraoui)
 - **LinkedIn:** [BELHERAOUI ABDERRAHMANNE](https://www.linkedin.com/in/belheraoui-abderrahmanne-26b4073b3/)
 
